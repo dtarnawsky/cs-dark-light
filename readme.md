@@ -1,11 +1,11 @@
 # Android Bars
 
 In an Android Capacitor application there are several Native UI components that you may want to style:
-- The Status Bar
-- The Navigation Bar (gesture or 2/3 button)
-- The Splash Screen
-- The "Notch" or area around the camera
-- Dark mode
+- [Status Bar](#status-bar)
+- [Navigation Bar](#the-navigation-bar) (gesture or 2/3 button)
+- [Splash Screen](#splash-screen)
+- ["Notch"](#the-notch--dark-mode) or area around the camera
+- [Dark mode](#what-about-dark-mode)
 
 In a default Capacitor application these look like:
 
@@ -101,3 +101,22 @@ NavigationBar.setColor({ color: color, darkButtons: darkMode });
 As you can see the navigation bar is now the dark green (`#003300`) when in dark mode.
 
 ![Navigation Bar Dark Mode](./assets/nav-darkmode.png)
+
+## Splash Screen
+
+The Android Splash Screen has changed in Android 12 and above to display the App's icon centered. The background color is either white or black in dark mode.
+
+To modify the background color you need to add `windowSplashScreenBackground` to the file `android/app/src/main/res/values/styles.xml`:
+
+```xml
+    <style name="AppTheme.NoActionBarLaunch" parent="Theme.SplashScreen">
+        <item name="android:background">@drawable/splash</item>
+        <item name="windowSplashScreenBackground">#00FF00</item>
+    </style>
+```
+
+You can also choose a different color for Dark Mode using the same technique [as described before](#what-about-dark-mode) by setting `windowSplashScreenBackground` in the   `values-night` folder.
+
+Tip: You can create your splash screen and icon assets using [this guide](https://capacitorjs.com/docs/guides/splash-screens-and-icons).
+
+## Status Bar
