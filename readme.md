@@ -117,7 +117,7 @@ To modify the background color you need to add `windowSplashScreenBackground` to
 
 You can also choose a different color for Dark Mode using the same technique [as described before](#what-about-dark-mode) by setting `windowSplashScreenBackground` in the   `values-night` folder.
 
-Note: Although the `@capacitor/splash-screen` plugin has a `backgroundColor` property it is only usable on Android 11 and below. Use the above technique to set the background color of the Splash Screen.
+Note: Although the `@capacitor/splash-screen` plugin has a [`backgroundColor`](https://capacitorjs.com/docs/apis/splash-screen#background-color) property it is only usable on Android 11 and below. Use the above technique to set the background color of the Splash Screen.
 
 Tip: You can create your splash screen and icon assets using [this guide](https://capacitorjs.com/docs/guides/splash-screens-and-icons).
 
