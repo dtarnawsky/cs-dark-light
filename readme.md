@@ -104,7 +104,7 @@ As you can see the navigation bar is now the dark green (`#003300`) when in dark
 
 ## Splash Screen
 
-The Android Splash Screen has changed in Android 12 and above to display the App's icon centered. The background color is either white or black in dark mode.
+The Android Splash Screen has changed in Android 12+ to display the App's icon centered. The background color is either white or black in dark mode.
 
 To modify the background color you need to add `windowSplashScreenBackground` to the file `android/app/src/main/res/values/styles.xml`:
 
@@ -116,6 +116,8 @@ To modify the background color you need to add `windowSplashScreenBackground` to
 ```
 
 You can also choose a different color for Dark Mode using the same technique [as described before](#what-about-dark-mode) by setting `windowSplashScreenBackground` in the   `values-night` folder.
+
+Note: Although the `@capacitor/splash-screen` plugin has a `backgroundColor` property it is only usable on Android 11 and below. Use the above technique to set the background color of the Splash Screen.
 
 Tip: You can create your splash screen and icon assets using [this guide](https://capacitorjs.com/docs/guides/splash-screens-and-icons).
 
